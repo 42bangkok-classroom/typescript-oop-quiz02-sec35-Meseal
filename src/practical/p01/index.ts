@@ -1,5 +1,3 @@
-export {}
-
 import axios from 'axios';
 
 interface Post {
@@ -7,7 +5,7 @@ interface Post {
   title: string;
 }
 
-async function getEdgePosts(): Promise<Post[]> {
+export async function getEdgePosts(): Promise<Post[]> {
   try {
     const response = await axios.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
     const posts = response.data;
