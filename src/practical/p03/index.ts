@@ -18,8 +18,8 @@ interface PostWithCount {
 export async function mapPostWithCommentCount(): Promise<PostWithCount[]> {
   try {
     const [postsRes, commentsRes] = await Promise.all([
-      axios.get<Post[]>('https://jsonplaceholder.typicode.com/posts'),
-      axios.get<Comment[]>('https://jsonplaceholder.typicode.com/comments')
+      axios.get<Post[]>(''),
+      axios.get<Comment[]>('')
     ]);
 
     const posts = postsRes.data;
