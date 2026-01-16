@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-export async function countCommentsByPost() {
+async function countCommentsByPost() {
   try {
     const response = await axios.get('https://jsonplaceholder.typicode.com/comments');
     const comments = response.data;
